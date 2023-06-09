@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Estadística Local | Municipio de Tandil</title>
     <!-- FAVICON -->
     <link rel="icon" href="img/favicon.png" />
     <!-- GOOGLE FONTS -->
@@ -16,40 +16,130 @@
     />
     <!-- CSS MAIN -->
     <link rel="stylesheet" href="src/main.css" />
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
   </head>
   <body>
-    <header>
-      <h1>DIRECCIÓN DE ESTADÍSTICA LOCAL</h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur id
-        inventore corporis eius quod, distinctio illum vel dolore nemo
-        architecto minus dicta illo, nobis dolorum, ipsum quae temporibus
-        cupiditate veniam.
-      </p>
-    </header>
+    <nav class="navbar">
+      <div class="content">
+        <div class="logo">
+          <a href="#"
+            ><img class="logo-tandil" src="img/logo_municipio.png" alt=""
+          /></a>
+        </div>
+        <ul class="menu-list">
+          <div class="icon cancel-btn">
+            <i class="fas fa-times"></i>
+          </div>
+          <li><a href="#">Boletines estadísticos</a></li>
+          <li><a href="#">Informes económicos</a></li>
+          <li><a href="#">Tablero de indicadores</a></li>
+          <li>
+            <a href="#"
+              ><button class="btn-datos">
+                <i class="btn-datos fa-solid fa-database"></i>DATOS ABIERTOS
+              </button></a
+            >
+          </li>
+        </ul>
+
+        <div class="icon menu-btn">
+          <i class="burger fas fa-bars"></i>
+        </div>
+      </div>
+    </nav>
+    <section class="banner content">
+      <div class="main-title">
+        <h2 class="thin-font">Dirección de</h2>
+        <h1>ESTADÍSTICA LOCAL</h1>
+        <hr />
+        <p>
+          Encontrá los últimos informes de nuestra ciudad en precios,
+          construcción, comercio e industria. Además tablero de indicadores
+          económicos, boletines estadísticos, informes varios y más en nuestro
+          sitio web.
+        </p>
+      </div>
+      <img class="bg-img" src="img/estadistica.png" alt="" />
+    </section>
     <main>
+      <section id="sec-1"></section>
       <section>
-        <div>
-          <img src="img/img-placeholder.jpg" alt="" />
-          <figcaption>Informes Mensuales</figcaption>
-          <p>Boletines Estadísticos</p>
-          <button>Ver más</button>
-        </div>
-        <div>
-          <img src="img/img-placeholder.jpg" alt="" />
-          <figcaption>EHE</figcaption>
-          <p>Encuestas de Hogares y Empleo</p>
-          <button>Ver más</button>
-        </div>
-        <div>
-          <img src="img/img-placeholder.jpg" alt="" />
-          <figcaption>Informes Varios</figcaption>
-          <p>Encuestas e Informes</p>
-          <button>Ver más</button>
-        </div>
       </section>
       <section></section>
+      <section></section>
     </main>
-    <footer></footer>
+    <footer>
+      <div class="content">
+        <div class="social-wrapper">
+          <a href="#"
+            ><img class="logo-tandil" src="img/logo_municipio.png" alt=""
+          /></a>
+          <div class="social">
+            <a href=""
+              ><div class="social-icon">
+                <i class="fa-brands fa-facebook-f"></i></div
+            ></a>
+            <a href=""
+              ><div class="social-icon">
+                <i class="fa-brands fa-twitter"></i></div
+            ></a>
+            <a href=""
+              ><div class="social-icon">
+                <i class="fa-brands fa-instagram"></i></div
+            ></a>
+            <a href=""
+              ><div class="social-icon">
+                <i class="fa-brands fa-youtube"></i></div
+            ></a>
+          </div>
+        </div>
+        <div class="social-links">
+          <h4>OTROS LINKS</h4>
+          <a href="">Alianza para el Gobierno Abierto</a
+          ><a href=""
+            >Organización para la Cooperación y el Desarrollo Económico</a
+          ><a href="">Organización de los Estados Americanos</a
+          ><a href=""
+            >Centro Latinoamericano de Administración para el Desarrollo</a
+          ><a href="">Comisión Económica para América Latina y el Caribe</a>
+          <a href="">Dirección Nacional de Gobierno Abierto</a>
+        </div>
+        <div class="logos">
+          <img src="img/sist.png" alt="" /><img src="img/usina.png" alt="" />
+        </div>
+        <div class="contact">
+          <h4>CONTACTANOS</h4>
+          <i class="fa-solid fa-location-dot"></i>
+          <p>Municipio de Tandil</p>
+          <p>Belgrano 485, Tandil</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const body = document.querySelector("body");
+      const navbar = document.querySelector(".navbar");
+      const menuBtn = document.querySelector(".menu-btn");
+      const cancelBtn = document.querySelector(".cancel-btn");
+      menuBtn.onclick = () => {
+        navbar.classList.add("show");
+        menuBtn.classList.add("hide");
+        body.classList.add("disabled");
+      };
+      cancelBtn.onclick = () => {
+        body.classList.remove("disabled");
+        navbar.classList.remove("show");
+        menuBtn.classList.remove("hide");
+      };
+      window.onscroll = () => {
+        this.scrollY > 20
+          ? navbar.classList.add("sticky")
+          : navbar.classList.remove("sticky");
+      };
+    </script>
   </body>
 </html>
