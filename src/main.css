@@ -49,6 +49,7 @@ li {
 section {
   height: 100vh;
 }
+
 /*====================== NAV ======================*/
 .navbar {
   position: fixed;
@@ -139,12 +140,7 @@ section {
   display: none;
 }
 /*====================== BANNER ======================*/
-/* .banner {
-  height: 100vh;
-} */
-
 .bg-img {
-  /* display: none; */
   z-index: -1;
   width: 100%;
   position: absolute;
@@ -160,6 +156,18 @@ section {
 
 .main-title :is(h1, h2, p) {
   color: var(--primary-font-color);
+}
+
+.main-title :is(h1,h2) {
+  font-size: 1.7rem;
+  }
+
+.main-title p {
+font-size: 1.3rem;
+}
+
+hr {
+  margin-block: 1rem;
 }
 
 /*====================== CONTENT STYLE ======================*/
@@ -215,6 +223,10 @@ footer .logo-tandil {
   display: flex;
   flex-direction: column;
 }
+
+.social-links a {
+  margin-block: 0.2rem;
+}
 /* --------- LOGOS --------- */
 .logos {
   display: flex;
@@ -226,8 +238,23 @@ footer .logo-tandil {
   margin-inline: 1rem;
 }
 /* --------- CONTACT --------- */
-.contact :is(h4, i, p) {
+.contact-wrapper {
+  display: flex;
+  line-height: 1rem;
+}
+
+.contact :is(h4, i, p, a) {
   color: #fff;
+}
+
+.contact-icons {
+  margin-right: 0.5rem;
+}
+
+.contact-icons i,
+.contact-text :is(p, a) {
+  display: block;
+  margin-block: 0.5rem;
 }
 
 /*====================== MEDIA QUERIES ======================*/
