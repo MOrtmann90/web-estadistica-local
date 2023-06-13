@@ -23,6 +23,7 @@
     />
   </head>
   <body>
+    <!--=========================== NAV ===========================-->
     <nav class="navbar">
       <div class="content">
         <div class="logo">
@@ -34,13 +35,17 @@
           <div class="icon cancel-btn">
             <i class="fas fa-times"></i>
           </div>
-          <li><a href="#section1">Boletines estadísticos</a></li>
-          <li><a href="#section2">Informes económicos</a></li>
-          <li><a href="#section3">Tablero de indicadores</a></li>
+          <li>
+            <a class="menu-link" href="#section1">Boletines estadísticos</a>
+          </li>
+          <li><a class="menu-link" href="#section2">Informes económicos</a></li>
+          <li>
+            <a class="menu-link" href="#section3">Tablero de indicadores</a>
+          </li>
           <li><a href="http://mapa.tandil.gov.ar/IdeTandil/">IDE Tandil</a></li>
           <li>
-            <a href="#"
-              ><button class="btn-datos">
+            <a href="http://datos.tandil.gov.ar/">
+              <button class="btn-datos">
                 <i class="btn-datos fa-solid fa-database"></i>DATOS ABIERTOS
               </button></a
             >
@@ -52,6 +57,7 @@
         </div>
       </div>
     </nav>
+    <!--=========================== SECTION 1 ===========================-->
     <section class="banner content">
       <div class="main-title">
         <h2 class="thin-font">Dirección de</h2>
@@ -68,39 +74,57 @@
     </section>
     <main>
       <section id="section1">
-        <div class="sect1-card">
+        <a href="#" class="sect1-card">
           <i class="fa-solid fa-chart-column"></i>
           <div class="card-description">
             <h4>INFORMES MENSUALES</h4>
             <p>Boletines estadísticos</p>
-            <button>Ver más</button>
+            <button class="more">Ver más</button>
           </div>
-        </div>
-        <div class="sect1-card">
+        </a>
+        <a href="#" class="sect1-card">
           <i class="fa-solid fa-list-check"></i>
           <div class="card-description">
             <h4>EHE</h4>
             <p>Encuestas de Hogares y Empleo</p>
-            <button>Ver más</button>
+            <button class="more">Ver más</button>
           </div>
-        </div>
-        <div class="sect1-card">
+        </a>
+        <a href="#" class="sect1-card">
           <i class="fa-solid fa-sheet-plastic"></i>
           <div class="card-description">
             <h4>INFORMES VARIOS</h4>
             <p>Encuestas e informes</p>
-            <button>Ver más</button>
+            <button class="more">Ver más</button>
           </div>
+        </a>
+      </section>
+      <!--=========================== SECTION 2 ===========================-->
+      <section id="section2">
+        <div class="grid-container">
+          <a href="#" class="reports-cards"
+            ><i class="fa-solid fa-car"></i><span>Sector automotriz</span></a
+          >
+          <a href="#" class="reports-cards"
+            ><i class="fa-solid fa-trowel-bricks"></i
+            ><span>Construcción</span></a
+          >
+          <a href="#" class="reports-cards"
+            ><i class="fa-solid fa-store"></i><span>Comercio minorista</span></a
+          >
+          <a href="#" class="reports-cards"
+            ><i class="fa-solid fa-hand-holding-dollar"></i
+            ><span>Precios</span></a
+          >
+          <a href="#" class="reports-cards"
+            ><i class="fa-solid fa-mountain-sun"></i><span>Turismo</span></a
+          >
+          <a href="#" class="reports-cards"
+            ><i class="fa-solid fa-industry"></i><span>Industria</span></a
+          >
         </div>
       </section>
-      <section id="section2">
-        <div class="reports-cards"></div>
-        <div class="reports-cards"></div>
-        <div class="reports-cards"></div>
-        <div class="reports-cards"></div>
-        <div class="reports-cards"></div>
-        <div class="reports-cards"></div>
-      </section>
+      <!--=========================== SECTION 3 ===========================-->
       <section id="section3">
         <div class="text-wrapper">
           <h2>Tablero de indicadores económicos</h2>
@@ -108,12 +132,13 @@
           <p>
             Describir brevemente qué podemos encontrar en esta sección:
             gráficos, mapas, estadísticas, todo lo relativo a un tablero de
-            indicadores económicos del Municipio de Tandil
+            indicadores económicos del Municipio de Tandil.
           </p>
         </div>
         <button class="btn-datos">Ir al tablero</button>
       </section>
     </main>
+    <!--=========================== FOOTER ===========================-->
     <footer>
       <div class="content">
         <div class="social-wrapper">
@@ -182,6 +207,7 @@
       const navbar = document.querySelector(".navbar");
       const menuBtn = document.querySelector(".menu-btn");
       const cancelBtn = document.querySelector(".cancel-btn");
+      const menuLinks = document.querySelectorAll("a.menu-link");
       menuBtn.onclick = () => {
         navbar.classList.add("show");
         menuBtn.classList.add("hide");
@@ -192,6 +218,15 @@
         navbar.classList.remove("show");
         menuBtn.classList.remove("hide");
       };
+
+      menuLinks.forEach((menuLinks) => {
+        menuLinks.addEventListener("click", () => {
+          body.classList.remove("disabled");
+          navbar.classList.remove("show");
+          menuBtn.classList.remove("hide");
+        });
+      });
+
       window.onscroll = () => {
         this.scrollY > 20
           ? navbar.classList.add("sticky")
