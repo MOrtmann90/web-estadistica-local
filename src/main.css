@@ -271,7 +271,6 @@ main :is(#section1, #section2, #section3) {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  
 }
 
 #section2 .reports-cards i {
@@ -292,7 +291,7 @@ main :is(#section1, #section2, #section3) {
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  text-align: justify;
+
 }
 #section3 .text-wrapper {
   margin-top: 4rem;
@@ -305,10 +304,14 @@ main :is(#section1, #section2, #section3) {
   border: 1px solid var(--theme-color);
 }
 
+#section3 p {
+  text-align: justify;
+}
+
 #section3 button {
   width: 50%;
   border-radius: 20px;
-  margin: 4rem auto;
+  margin: 8rem auto;
 }
 
 /*====================== FOOTER ======================*/
@@ -402,7 +405,7 @@ footer .logo-tandil {
 
 /*====================== MEDIA QUERIES ======================*/
 
-@media (max-width: 1230px) {
+/* @media (max-width: 1230px) {
   .content {
     padding: 0 60px;
   }
@@ -416,7 +419,7 @@ footer .logo-tandil {
   .content {
     padding: 0 30px;
   }
-}
+} */
 @media (max-width: 868px) {
   body.disabled {
     overflow: hidden;

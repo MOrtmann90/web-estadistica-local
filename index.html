@@ -21,6 +21,9 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
+    <!-- AOS lib -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </head>
   <body>
     <!--=========================== NAV ===========================-->
@@ -70,11 +73,11 @@
           sitio web.
         </p>
       </div>
-      <img class="bg-img" src="img/estadistica.png" alt="" />
+      <img class="bg-img" data-aos="fade-up" src="img/estadistica.png" alt="" />
     </section>
     <main>
       <section id="section1">
-        <a href="#" class="sect1-card">
+        <a href="#" data-aos="fade-right" class="sect1-card">
           <i class="fa-solid fa-chart-column"></i>
           <div class="card-description">
             <h4>INFORMES MENSUALES</h4>
@@ -82,7 +85,7 @@
             <button class="more">Ver más</button>
           </div>
         </a>
-        <a href="#" class="sect1-card">
+        <a href="#" data-aos="fade-right" class="sect1-card">
           <i class="fa-solid fa-list-check"></i>
           <div class="card-description">
             <h4>EHE</h4>
@@ -90,7 +93,7 @@
             <button class="more">Ver más</button>
           </div>
         </a>
-        <a href="#" class="sect1-card">
+        <a href="#" data-aos="fade-right" class="sect1-card">
           <i class="fa-solid fa-sheet-plastic"></i>
           <div class="card-description">
             <h4>INFORMES VARIOS</h4>
@@ -102,31 +105,31 @@
       <!--=========================== SECTION 2 ===========================-->
       <section id="section2">
         <div class="grid-container">
-          <a href="#" class="reports-cards"
+          <a href="#" data-aos="fade-right" class="reports-cards"
             ><i class="fa-solid fa-car"></i><span>Sector automotriz</span></a
           >
-          <a href="#" class="reports-cards"
+          <a href="#" data-aos="fade-left" class="reports-cards"
             ><i class="fa-solid fa-trowel-bricks"></i
             ><span>Construcción</span></a
           >
-          <a href="#" class="reports-cards"
+          <a href="#" data-aos="fade-right" class="reports-cards"
             ><i class="fa-solid fa-store"></i><span>Comercio minorista</span></a
           >
-          <a href="#" class="reports-cards"
+          <a href="#" data-aos="fade-left" class="reports-cards"
             ><i class="fa-solid fa-hand-holding-dollar"></i
             ><span>Precios</span></a
           >
-          <a href="#" class="reports-cards"
+          <a href="#" data-aos="fade-right" class="reports-cards"
             ><i class="fa-solid fa-mountain-sun"></i><span>Turismo</span></a
           >
-          <a href="#" class="reports-cards"
+          <a href="#" data-aos="fade-left" class="reports-cards"
             ><i class="fa-solid fa-industry"></i><span>Industria</span></a
           >
         </div>
       </section>
       <!--=========================== SECTION 3 ===========================-->
       <section id="section3">
-        <div class="text-wrapper">
+        <div data-aos="fade-right" class="text-wrapper">
           <h2>Tablero de indicadores económicos</h2>
           <hr />
           <p>
@@ -135,12 +138,12 @@
             indicadores económicos del Municipio de Tandil.
           </p>
         </div>
-        <button class="btn-datos">Ir al tablero</button>
+        <button data-aos="fade-up" class="btn-datos">Ir al tablero</button>
       </section>
     </main>
     <!--=========================== FOOTER ===========================-->
     <footer>
-      <div class="content">
+      <div class="content" data-aos="fade-up">
         <div class="social-wrapper">
           <a href="#"
             ><img
@@ -149,7 +152,7 @@
               src="img/logo_municipio.png"
               alt=""
           /></a>
-          <div class="social">
+          <div class="social" data-aos="fade-up">
             <a href=""
               ><div class="social-icon">
                 <i class="fa-brands fa-facebook-f"></i></div
@@ -168,7 +171,7 @@
             ></a>
           </div>
         </div>
-        <div class="social-links">
+        <div class="social-links" data-aos="fade-up">
           <h4>OTROS LINKS</h4>
           <a href="">Alianza para el Gobierno Abierto</a
           ><a href=""
@@ -202,36 +205,6 @@
       </div>
     </footer>
 
-    <script>
-      const body = document.querySelector("body");
-      const navbar = document.querySelector(".navbar");
-      const menuBtn = document.querySelector(".menu-btn");
-      const cancelBtn = document.querySelector(".cancel-btn");
-      const menuLinks = document.querySelectorAll("a.menu-link");
-      menuBtn.onclick = () => {
-        navbar.classList.add("show");
-        menuBtn.classList.add("hide");
-        body.classList.add("disabled");
-      };
-      cancelBtn.onclick = () => {
-        body.classList.remove("disabled");
-        navbar.classList.remove("show");
-        menuBtn.classList.remove("hide");
-      };
-
-      menuLinks.forEach((menuLinks) => {
-        menuLinks.addEventListener("click", () => {
-          body.classList.remove("disabled");
-          navbar.classList.remove("show");
-          menuBtn.classList.remove("hide");
-        });
-      });
-
-      window.onscroll = () => {
-        this.scrollY > 20
-          ? navbar.classList.add("sticky")
-          : navbar.classList.remove("sticky");
-      };
-    </script>
+    <script src="/src/script.js"></script>
   </body>
 </html>
