@@ -74,9 +74,13 @@ html :is(button, a):hover {
   opacity: 0.75;
 }
 
-/* button:hover {
-  opacity: 0.75;
-} */
+button {
+  color: #fff;
+  background-color: var(--theme-color);
+  padding: 0.4rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
 
 /*====================== NAV ======================*/
 .navbar {
@@ -113,10 +117,6 @@ html :is(button, a):hover {
 .btn-datos {
   color: #fff;
   margin-inline-end: 0.4rem;
-  background-color: var(--theme-color);
-  padding: 0.4rem;
-  border-radius: 5px;
-  cursor: pointer;
 }
 
 .logo-tandil {
@@ -169,13 +169,6 @@ html :is(button, a):hover {
   display: none;
 }
 /*====================== BANNER ======================*/
-.bg-img {
-  z-index: -1;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  right: 0;
-}
 
 .main-title {
   position: relative;
@@ -197,6 +190,14 @@ html :is(button, a):hover {
 
 hr {
   margin-block: 1rem;
+}
+
+.bg-img {
+  z-index: -1;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 /*====================== CONTENT STYLE ======================*/
@@ -238,13 +239,6 @@ main :is(#section1, #section2, #section3) {
 
 .more {
   display: none;
-  position: absolute;
-  right: 1rem;
-  margin-block: 0.5rem;
-  padding: 0.2rem;
-  background-color: var(--theme-color);
-  border-radius: 5px;
-  color: #fff;
 }
 
 /* --------SECTION 2-------- */
@@ -252,6 +246,12 @@ main :is(#section1, #section2, #section3) {
   background: var(--banner-bg) url(../img/banner2.jpg) no-repeat;
   background-size: cover;
   background-blend-mode: darken;
+  padding-top: 13vh;
+}
+
+.section-title {
+  display: none;
+
 }
 
 .grid-container {
@@ -286,16 +286,20 @@ main :is(#section1, #section2, #section3) {
 
 /* --------SECTION 3-------- */
 #section3 {
-  background: #ffffffa4 url(../img/banner3_mid.jpg);
+  background: #ffffffa4 url(../img/banner3_mid.jpg) no-repeat;
+  background-size: cover;
   background-blend-mode: lighten;
-  padding: 1rem;
+  padding-inline: 1rem;
   display: flex;
   flex-direction: column;
+}
 
+#section3 .sec3-wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-block: auto;
 }
-#section3 .text-wrapper {
-  margin-top: 4rem;
-}
+
 #section3 .text-wrapper :is(h2, hr, p) {
   color: var(--secondarey-font-color);
 }
@@ -308,15 +312,17 @@ main :is(#section1, #section2, #section3) {
   text-align: justify;
 }
 
-#section3 button {
+.sec3-wrapper .btn-tablero {
   width: 50%;
   border-radius: 20px;
-  margin: 8rem auto;
+  margin-block: 8rem;
+  align-self: center;
 }
 
 /*====================== FOOTER ======================*/
 footer {
   background-color: #363636;
+  padding-block: 1rem;
 }
 
 #logo-tandil-footer {
@@ -327,7 +333,16 @@ footer {
 .social-links,
 .logos,
 .contact {
-  padding-block: 1rem;
+  /* padding-block: 1rem; */
+  /* border: 1px solid white; */
+  margin: 1rem;
+}
+
+.footer-section {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-around; */
+  padding: 1rem;
 }
 
 /* --------- SOCIAL WRAPPER --------- */
@@ -376,12 +391,13 @@ footer .logo-tandil {
 /* --------- LOGOS --------- */
 .logos {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  margin-inline: auto;
 }
 
 .logos img {
   width: 6rem;
-  margin-inline: 1rem;
+  margin: auto;
 }
 /* --------- CONTACT --------- */
 .contact-wrapper {
@@ -420,6 +436,7 @@ footer .logo-tandil {
     padding: 0 30px;
   }
 } */
+
 @media (max-width: 868px) {
   body.disabled {
     overflow: hidden;
@@ -459,20 +476,93 @@ footer .logo-tandil {
   }
 }
 
-@media (min-width: 768px) {
-  .bg-img {
-    width: 60%;
+@media (min-width: 475px) {
+  main :is(#section1, #section2, #section3) {
+    padding-inline: 5rem;
+  }
+
+  #section1 {
+    padding-inline: 6rem;
+  }
+
+  footer {
+    background-color: #363636;
+    flex-direction: column;
+  }
+
+  .btn-tablero {
+    max-width: 15rem;
   }
 }
 
-@media (min-width: 1024px) {
-  .banner {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+@media (min-width: 768px) {
+  .main-title {
+    top: 13rem;
+    width: 80%;
   }
 
+  .main-title h1,
+  .main-title h2 {
+    font-size: 2.5rem;
+  }
+
+  #section1 :is(h4, p),
+  #section3 p {
+    font-size: 1.5rem;
+  }
+
+  .more {
+    display: block;
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    width: 6rem;
+    padding: 0.5rem;
+    background-color: var(--theme-color);
+    border-radius: 5px;
+    color: #fff;
+  }
+
+  .bg-img {
+    width: 80%;
+  }
+
+  .section-title {
+    display: block;
+    color: #fff;
+    font-weight: 400;
+    margin-top: 3rem;
+  }
+
+  .logos {
+    flex-direction: column;
+  }
+
+
+}
+
+@media (min-width: 1024px) {
   .main-title {
+    width: 70%;
+  }
+
+  #section1,
+  .grid-container,
+  .text-wrapper,
+  .footer-section {
+    margin-inline: auto;
+    max-width: 1250px;
+  }
+
+  .logos {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 1400px) {
+  .bg-img {
+    z-index: -1;
     width: 50%;
   }
 }
