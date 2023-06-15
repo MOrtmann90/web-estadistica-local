@@ -53,9 +53,9 @@ li {
 .thin-font {
   font-weight: 200;
 }
-section {
+/* section {
   height: 100vh;
-}
+} */
 
 h2 {
   font-size: 1.8rem;
@@ -179,38 +179,55 @@ button {
   cursor: pointer;
   display: none;
 }
-/*====================== BANNER ======================*/
+/*====================== BULLETIN ======================*/
+h1 {
+  color: #002746;
+  padding-top: 16vh;
+  margin-bottom: 1rem;
+}
 
-.main-title {
-  position: relative;
-  top: 10rem;
+.content .cards-container {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.bulletin-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: justify;
-}
-
-.main-title :is(h1, h2, p) {
-  color: var(--primary-font-color);
-}
-
-.main-title :is(h1, h2) {
-  font-size: 1.7rem;
-}
-
-.main-title p {
-  font-size: 1.3rem;
-}
-
-hr {
   margin-block: 1rem;
+  border: 1px solid gray;
+  border-radius: 10px;
+  background-color: #eee;
+}
+.mini-banner {
+  height: 10%;
 }
 
-.bg-img {
-  z-index: -1;
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  right: 0;
+.bulletin-card-img {
+  display: block;
+  height: 145px;
+  width: auto;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  object-fit: cover;
 }
 
+.bulletin-card-text hr {
+  margin-block: 0.5rem;
+  border: 2px solid var(--theme-color);
+}
+
+.bulletin-card-text {
+  padding: 1rem;
+}
+
+.bulletin-card button {
+  height: 2rem;
+  width: 6rem;
+  align-self: self-end;
+}
 /*====================== CONTENT STYLE ======================*/
 
 main :is(#section1, #section2, #section3) {
@@ -499,6 +516,52 @@ footer .logo-tandil {
 }
 
 @media (min-width: 768px) {
+  /*BULLETIN*/
+  .bulletin-card:hover {
+    background-color: #eee;
+    border-radius: 10px;
+    
+  }
+
+  .bulletin-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: justify;
+    margin-block: 1rem;
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+    padding: 1rem;
+  }
+  .mini-banner {
+    height: 10%;
+  }
+
+  .bulletin-card-img {
+    display: block;
+    height: 150px;
+    width: 200px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    object-fit: fill;
+  }
+
+  .bulletin-card-text hr {
+    margin-block: 0.5rem;
+    border: 1px solid #b1b1b1;
+  }
+
+  .bulletin-card-text {
+    padding: 0 1rem;
+  }
+
+  .bulletin-card-text h3 {
+    line-height: 1rem;
+    color: #002746;
+  }
+  /*BULLETIN*/
+
   .main-title {
     top: 9rem;
     max-width: 65%;
@@ -528,7 +591,6 @@ footer .logo-tandil {
     width: 6rem;
     margin-left: 1rem;
     padding: 0.5rem;
-    /* background-color: var(--theme-color); */
     border-radius: 5px;
     color: #fff;
     align-self: flex-end;
@@ -624,7 +686,7 @@ footer .logo-tandil {
 }
 
 @media (min-width: 1024px) {
-  .text{
+  .text-wrapper {
     margin-inline: auto;
     max-width: 1050px;
   }
