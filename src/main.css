@@ -328,14 +328,14 @@ main :is(#section1, #section2, #section3) {
 
 .sec3-wrapper .btn-tablero {
   width: clamp(8rem, 30%, 12rem);
-  /* border-radius: 20px; */
-  /* margin-block: 4rem; */
   margin: 6rem auto;
-
   padding: 0.5rem;
-
   border-radius: 5px;
   color: #fff;
+}
+
+#section3 .btn-tablero:hover {
+  opacity: 0.75;
 }
 
 /*====================== FOOTER ======================*/
@@ -627,12 +627,9 @@ footer .logo-tandil {
     display: flex;
     flex-direction: column;
   }
-}
 
-@media (min-width: 1024px) {
   .text-wrapper{
     margin-inline: auto;
     max-width: 1050px;
   }
-
 }
