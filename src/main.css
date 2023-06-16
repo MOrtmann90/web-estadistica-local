@@ -520,6 +520,12 @@ footer .logo-tandil {
   .card-description {
     margin-bottom: 1rem;
   }
+
+  #section1 a,
+  .grid-container a{
+    cursor: auto;
+  }
+
   .more {
     display: block;
     position: absolute;
@@ -623,9 +629,10 @@ footer .logo-tandil {
   }
 }
 
-/* @media (min-width: 1024px) {
-  .text{
+@media (min-width: 1024px) {
+  .text-wrapper{
     margin-inline: auto;
     max-width: 1050px;
   }
-} */
+
+}
