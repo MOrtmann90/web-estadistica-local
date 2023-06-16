@@ -30,7 +30,7 @@
     <nav class="navbar">
       <div class="content">
         <div class="logo">
-          <a href="#"
+          <a href="https://www.tandil.gov.ar/"
             ><img class="logo-tandil" src="img/logo_municipio.png" alt=""
           /></a>
         </div>
@@ -73,59 +73,72 @@
           sitio web.
         </p>
       </div>
-      <img class="bg-img" data-aos="fade-up" src="img/estadistica.png" alt="" />
+      <img
+        class="bg-img img-fade-in"
+        data-aos="fade-up"
+        src="img/estadistica.png"
+        alt=""
+      />
     </section>
     <main>
       <section id="section1">
-        <a href="#" data-aos="fade-right" class="sect1-card">
+        <div class="sect1-card" data-aos="fade-right">
           <i class="fa-solid fa-chart-column"></i>
           <div class="card-description">
             <h4>INFORMES MENSUALES</h4>
             <p>Boletines estadísticos</p>
           </div>
-          <button class="more">Ver más</button>
-        </a>
-        <a href="#" data-aos="fade-right" class="sect1-card">
+          <button id="boletines-btn" class="more">Ver más</button>
+        </div>
+        <div class="sect1-card" data-aos="fade-right">
           <i class="fa-solid fa-list-check"></i>
           <div class="card-description">
             <h4>EHE</h4>
             <p>Encuestas de Hogares y Empleo</p>
           </div>
-          <button class="more">Ver más</button>
-        </a>
-        <a href="#" data-aos="fade-right" class="sect1-card">
+          <button id="ehe-btn" class="more">Ver más</button>
+        </div>
+        <div class="sect1-card" data-aos="fade-right">
           <i class="fa-solid fa-sheet-plastic"></i>
           <div class="card-description">
             <h4>INFORMES VARIOS</h4>
             <p>Encuestas e informes</p>
           </div>
-          <button class="more">Ver más</button>
-        </a>
+          <button id="informes-btn" class="more">Ver más</button>
+        </div>
       </section>
       <!--=========================== SECTION 2 ===========================-->
       <section id="section2">
-        <!-- <h2 class="section-title">Informes económicos</h2> -->
+        <h2 class="section-title">Informes económicos</h2>
         <div class="grid-container">
-          <a href="#" data-aos="fade-right" class="reports-cards"
-            ><i class="fa-solid fa-car"></i><span>Sector automotriz</span><button class="more-gray">Ver más</button></a
+          <div id="auto-btn" data-aos="fade-right" class="reports-cards">
+            <i class="fa-solid fa-car"></i><span>Sector automotriz</span
+            ><button class="more-gray">Ver más</button>
+          </div>
+          <div
+            id="construccion-btn"
+            data-aos="fade-right"
+            class="reports-cards"
           >
-          <a href="#" data-aos="fade-right" class="reports-cards"
-            ><i class="fa-solid fa-trowel-bricks"></i
-            ><span>Construcción</span><button class="more-gray">Ver más</button></a
-          >
-          <a href="#" data-aos="fade-right" class="reports-cards"
-            ><i class="fa-solid fa-store"></i><span>Comercio minorista</span><button class="more-gray">Ver más</button></a
-          >
-          <a href="#" data-aos="fade-right" class="reports-cards"
-            ><i class="fa-solid fa-hand-holding-dollar"></i
-            ><span>Precios</span><button class="more-gray">Ver más</button></a
-          >
-          <a href="#" data-aos="fade-right" class="reports-cards"
-            ><i class="fa-solid fa-mountain-sun"></i><span>Turismo</span><button class="more-gray">Ver más</button></a
-          >
-          <a href="#" data-aos="fade-right" class="reports-cards"
-            ><i class="fa-solid fa-industry"></i><span>Industria</span><button class="more-gray">Ver más</button></a
-          >
+            <i class="fa-solid fa-trowel-bricks"></i><span>Construcción</span
+            ><button class="more-gray">Ver más</button>
+          </div>
+          <div id="comercio-btn" data-aos="fade-right" class="reports-cards">
+            <i class="fa-solid fa-store"></i><span>Comercio minorista</span
+            ><button class="more-gray">Ver más</button>
+          </div>
+          <div id="precios-btn" data-aos="fade-right" class="reports-cards">
+            <i class="fa-solid fa-hand-holding-dollar"></i><span>Precios</span
+            ><button class="more-gray">Ver más</button>
+          </div>
+          <div id="turismo-btn" data-aos="fade-right" class="reports-cards">
+            <i class="fa-solid fa-mountain-sun"></i><span>Turismo</span
+            ><button class="more-gray">Ver más</button>
+          </div>
+          <div id="industria-btn" data-aos="fade-right" class="reports-cards">
+            <i class="fa-solid fa-industry"></i><span>Industria</span
+            ><button class="more-gray">Ver más</button>
+          </div>
         </div>
       </section>
       <!--=========================== SECTION 3 ===========================-->
@@ -140,7 +153,9 @@
               indicadores económicos del Municipio de Tandil.
             </p>
           </div>
-          <button data-aos="fade-up" class="btn-tablero">Ir al tablero</button>
+          <button id="tablero-btn" data-aos="fade-up" class="btn-tablero">
+            Ir al tablero
+          </button>
         </div>
       </section>
     </main>
@@ -150,7 +165,7 @@
         <!-- <div class="content"> -->
         <!-- Social wrapper -->
         <div class="social-wrapper">
-          <a href="#"
+          <a href="https://www.tandil.gov.ar/"
             ><img
               id="logo-tandil-footer"
               class="logo-tandil"
