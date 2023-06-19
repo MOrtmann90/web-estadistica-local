@@ -32,7 +32,6 @@ window.onscroll = () => {
 };
 
 // Links routing
-
 // Section 1
 const boletinesBtn = document.querySelector("#boletines-btn");
 const eheBtn = document.querySelector("#ehe-btn");
@@ -97,3 +96,4 @@ tableroBtn.addEventListener("click", () => {
     "_blank"
   );
 });
+

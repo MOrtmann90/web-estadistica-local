@@ -383,15 +383,12 @@ footer {
 .social-links,
 .logos,
 .contact {
-  /* padding-block: 1rem; */
-  /* border: 1px solid white; */
   margin: 1rem;
 }
 
 .footer-section {
   display: flex;
   flex-wrap: wrap;
-  /* justify-content: space-around; */
   padding: 1rem;
 }
 
@@ -548,6 +545,11 @@ footer .logo-tandil {
   .sect1-card {
     max-width: 60%;
   }
+
+  .sect1-card i {
+    margin-block: 2rem;
+  }
+
   .card-description {
     margin-bottom: 1rem;
   }
