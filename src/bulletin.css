@@ -174,7 +174,9 @@ button {
 }
 
 .navbar .menu-list {
-  display: inline-flex;
+  display: flex;
+  flex-direction: row;
+  flex: 1 2 2rem;
 }
 
 .navbar.show a {
