@@ -98,6 +98,12 @@ button {
   justify-content: space-between;
 }
 
+.navbar .menu-list {
+  display: flex;
+  flex-direction: row;
+  flex: 1 2 2rem;
+}
+
 .menu-list li {
   text-align: center;
   margin-left: 25px;
