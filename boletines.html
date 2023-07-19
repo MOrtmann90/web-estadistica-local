@@ -39,11 +39,19 @@
             <i class="fas fa-times"></i>
           </div>
           <li>
-            <a class="menu-link" href="#section1">Boletines estadísticos</a>
+            <a class="menu-link" href="index.html#section1"
+              >Boletines estadísticos</a
+            >
           </li>
-          <li><a class="menu-link" href="#section2">Informes económicos</a></li>
           <li>
-            <a class="menu-link" href="#section3">Tablero de indicadores</a>
+            <a class="menu-link" href="index.html#section2"
+              >Informes económicos</a
+            >
+          </li>
+          <li>
+            <a class="menu-link" href="index.html#section3"
+              >Tablero de indicadores</a
+            >
           </li>
           <li>
             <a
@@ -52,7 +60,7 @@
             >
           </li>
           <!-- <li><a href="http://mapa.tandil.gov.ar/IdeTandil/">IDE Tandil</a></li> -->
-          <li>
+          <li></li>
         </ul>
 
         <div class="icon menu-btn">
@@ -63,7 +71,7 @@
     <!--=========================== CONTENT ===========================-->
     <section class="content">
       <h1>BOLETINES ESTADÍSTICOS</h1>
-
+      <!-- Boletin 49 -->
       <div class="cards-container">
         <div class="bulletin-card">
           <div class="img-container">
@@ -83,7 +91,7 @@
           </div>
           <button id="btn-49">Acceder</button>
         </div>
-
+        <!-- Boletin 50 -->
         <div class="bulletin-card">
           <div class="img-container">
             <div class="mini-banner" id="bol50"></div>
@@ -107,7 +115,7 @@
             <div class="mini-banner" id="bol51"></div>
             <img class="bulletin-card-img" src="boletines/img/51b.jpg" alt="" />
           </div>
-
+          <!-- Boletin 51 -->
           <div class="bulletin-card-text">
             <h3>#51 - Indicador de Precios</h3>
             <hr />
@@ -123,7 +131,7 @@
           </div>
           <button id="btn-51">Acceder</button>
         </div>
-
+        <!-- Boletin 52 -->
         <div class="bulletin-card">
           <div class="img-container">
             <div class="mini-banner" id="bol52"></div>
@@ -144,7 +152,7 @@
           </div>
           <button id="btn-52">Acceder</button>
         </div>
-
+        <!-- Boletin 53 -->
         <div class="bulletin-card">
           <div class="img-container">
             <div class="mini-banner" id="bol53"></div>
@@ -161,6 +169,34 @@
           </div>
           <button id="btn-53">Acceder</button>
         </div>
+        <!-- Boletin 54 -->
+        <div class="bulletin-card">
+          <div class="img-container">
+            <div class="mini-banner" id="bol54"></div>
+            <img
+              class="bulletin-card-img"
+              src="boletines/img/54.png"
+              alt=""
+              style="object-fit: cover"
+            />
+          </div>
+          <div class="bulletin-card-text">
+            <h3>#54 - Infraestructura de Datos Espaciales del Municipio</h3>
+            <hr />
+            <p>
+              Boletín de difusión de la labor realizada por el equipo del Área
+              de Geotecnologías, dependiente de la Dirección de Estadística
+              Local en la Subsecretaría de Innovación Tecnológica y
+              Participación Ciudadana del Municipio de Tandil.
+            </p>
+          </div>
+          <a class="acceso-btn"
+            href="boletines/boletin_54/boletin_estadistico_54.html"
+            target="_blank"
+            ><button id="btn-54">Acceder</button></a
+          >
+        </div>
+        <!-- Boletin 55 -->
       </div>
     </section>
     <!--=========================== FOOTER ===========================-->
@@ -245,7 +281,6 @@
       const bol51 = document.querySelector("#btn-51");
       const bol52 = document.querySelector("#btn-52");
       const bol53 = document.querySelector("#btn-53");
-      const bol54 = document.querySelector("#btn-54");
 
       bol49.addEventListener("click", () => {
         window.open(

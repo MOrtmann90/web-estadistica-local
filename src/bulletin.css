@@ -7,6 +7,7 @@
   --bol51: #f09d51;
   --bol52: #c1cc99;
   --bol53: #2c8c99;
+  --bol54: #35a29f;
 }
 
 #bol49 {
@@ -27,6 +28,10 @@
 
 #bol53 {
   background: linear-gradient(var(--bol53), transparent 95%);
+}
+
+#bol54 {
+  background: linear-gradient(var(--bol54), transparent 95%);
 }
 
 * {
@@ -98,6 +103,10 @@ button {
   padding: 0.4rem;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.acceso-btn {
+  margin-top: auto;
 }
 
 /*====================== NAV ======================*/
